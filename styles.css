@@ -1,0 +1,94 @@
+body {
+    background-color: #fff;
+    margin: 0;
+    padding: 1.3rem;
+    scroll-behavior: smooth;
+
+    font-family: Arial, sans-serif;
+  text-align: center;
+}
+.container{/*مشان اعملهم كلهم فوق بعض نفس العرض قصدي*/
+    max-width: 50 rem;
+    width: 80%;
+    margin: auto;
+}
+* {/*للجميع*/
+    font-family: "Figtree", serif;
+    scrollbar-width: thin;
+    scrollbar-color: #17a2b8 #ffff;
+}
+::-webkit-scrollbar {/*خاص بالهيكل تبع التمرير*/
+    width: 0.5rem;
+}
+::-webkit-scrollbar-track {/*خاص بالتمرير خلفية*/
+    background-color: #fff;
+    border-radius: 1.5rem;
+}
+::-webkit-scrollbar-thumb {/* للسحب عند الزر الخاص بالتمرير*/
+    background-color: #17a2b8;
+    border-radius: 1.5rem;
+}
+::-webkit-scrollbar-thumb:hover {/*الماورس تبع التمرير  اللون*/
+    background-color: #117a8c;
+}
+#total {/* خواص الصندوق الاول تبع الادخال*/
+    max-width: 100%;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.1rem 0.1rem #baa9a9;
+    padding: 0.1rem;
+    border: 2px solid #baa9a9; 
+}
+
+
+h1 {/*   تبعت الصندوق الاول الادخالh1 الخواص لل*/
+    text-align: center;
+    color: #000;
+}
+#inter-todoinput {/* خاصيات صندوق الادخال الصندوق الاول*/
+    padding: 0.5rem 1rem;
+    border: 0.06rem solid #fff;
+    border-radius: 0.3rem;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    margin: 1rem 0;
+    
+}
+#input-boxs
+,#input-boxs-cont { /*    خاصيات صندوق الادخال الصندوق الاول وكمان مشان الوسط */
+    display: flex;
+    align-items: center;
+   
+}
+ 
+ #input-boxs-text{ /* خواص صندوق الاخال عند الكتابة*/
+    padding: 0.831rem;
+    display: flex;
+    align-items: center;
+    border-radius: 0.3rem 0rem 0rem 0.3rem;
+    background-color: #17a2b8;
+    color: white;
+   
+ }
+#inter-todoinput input { /* لل type تبع ال input*/
+     width: 100%; 
+    padding: 0.7rem;
+    border: 0.2rem solid #ddd;
+    border-radius: 0rem 0.6rem 0.6rem 0rem;
+    outline: none;
+    
+}
+#inter-todoinput button {/* للزر تبع الصندوق الاول */
+    margin-top: 0.6rem;
+    background-color: #17a2b8;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.3rem;
+    border-radius: 0.3rem;
+    cursor: pointer;}
+#inter-todoinput button:hover {/* للزر تبع الصندوق الاول  للماوس */
+    background-color: #117a8c;
+}
