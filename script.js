@@ -29,3 +29,30 @@ let currentFilter = "All";
 let taskToDeleteId = null;
 let currentTaskId = null;
 
+// adding neew task
+function addTodo() {
+  const taskText = input.value.trim();
+  if (!taskText) {
+    document.getElementById("error-message").textContent = "Please enter a task.";
+    return;
+  }
+
+let firstCharCode = taskText.charCodeAt(0);
+    console.log("first char = "+firstCharCode);
+    if (!(firstCharCode >=65 && firstCharCode <=90 || firstCharCode >=97 && firstCharCode <=122) ) { // 32 هو كود المسافة
+      document.getElementById("error-message").textContent = "Task must start with a just character";
+      return;
+    }
+
+  document.getElementById("error-message").textContent = "";
+
+  const newTodo = {
+    id: Date.now(),
+    text: taskText,
+    done: false
+  };
+
+  todos.push(newTodo);
+  input.value = "";
+  saveTodos();
+  renderTodos(currentFilter);
